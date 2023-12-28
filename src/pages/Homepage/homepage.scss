@@ -1,0 +1,51 @@
+.homepage {
+  padding-block: 5.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__subtitle {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 6rem;
+    text-align: center;
+  }
+
+  &__cta {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-top: 3.375rem;
+    div {
+      display: grid;
+      place-content: center;
+      aspect-ratio: 1;
+      a {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #424242;
+        padding: 1.125rem 4.5rem;
+        background-color: white;
+        transition: all 0.3s ease;
+        &:hover {
+          padding: 1.125rem 6rem;
+        }
+      }
+      &:first-of-type {
+        background-image: url("../../assets/images/for-her.png");
+        background-size: cover;
+        background-position: center;
+      }
+      &:last-of-type {
+        background-image: url("../../assets/images/for-him.png");
+        background-position: center;
+      }
+    }
+  }
+}
