@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import App from "../App";
 import { lazy } from "react";
 
@@ -8,7 +8,7 @@ const Men = lazy(() => import("@/pages/Men"));
 const Collection = lazy(() => import("@/pages/Collection"));
 const Outlet = lazy(() => import("@/pages/Outlet"));
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     element: <App />,
