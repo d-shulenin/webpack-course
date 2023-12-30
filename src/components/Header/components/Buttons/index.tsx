@@ -1,9 +1,9 @@
 import "./buttons.scss";
-import Contact from "@/assets/icons/contact.svg";
 import Cart from "@/assets/icons/cart.svg";
-import Search from "@/assets/icons/search.svg";
-import Login from "@/assets/icons/login.svg";
+import Contact from "@/assets/icons/contact.svg";
 import Like from "@/assets/icons/like.svg";
+import Login from "@/assets/icons/login.svg";
+import Search from "@/assets/icons/search.svg";
 
 const Buttons = () => {
   return (

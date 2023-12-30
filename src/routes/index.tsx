@@ -1,6 +1,6 @@
-import { createHashRouter } from "react-router-dom";
 import App from "../App";
 import { lazy } from "react";
+import { createHashRouter } from "react-router-dom";
 
 const Homepage = lazy(() => import("@/pages/Homepage"));
 const Women = lazy(() => import("@/pages/Women"));

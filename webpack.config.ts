@@ -1,19 +1,15 @@
 import webpack from "webpack";
 import { buildWebpack } from "./configs/build/buildWebpack";
-import { BuildMode } from "./configs/build/types";
 import path from "path";
+import { BuildOptions } from "configs/build/types";
 
-interface EnvVariables {
-  mode: BuildMode;
-  devServerPort: number;
-  analyzer: boolean;
-}
-
-export default (env: EnvVariables): webpack.Configuration =>
+export default (env: Partial<BuildOptions>): webpack.Configuration =>
   buildWebpack({
     mode: env.mode ?? "development",
     devServerPort: env.devServerPort ?? 8080,
     analyzer: env.analyzer,
+    platform: env.platform,
+    statoscope: env.statoscope,
     paths: {
       entry: path.resolve(__dirname, "src", "index.tsx"),
       output: path.resolve(__dirname, "build"),

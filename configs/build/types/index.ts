@@ -5,11 +5,14 @@ export interface BuildPaths {
   src: string;
 }
 
-export type BuildMode = "development" | "production";
+type BuildMode = "development" | "production";
+export type BuildPlatform = "desktop" | "mobile";
 
 export interface BuildOptions {
   devServerPort: number;
   paths: BuildPaths;
   mode: BuildMode;
-  analyzer?: boolean;
+  analyzer: boolean;
+  platform: BuildPlatform;
+  statoscope: boolean;
 }

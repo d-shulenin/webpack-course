@@ -1,9 +1,9 @@
+import { BuildOptions } from "./types";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { ModuleOptions } from "webpack";
-import { BuildOptions } from "./types";
 
-export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
-  const isDev = options.mode === "development";
+export function buildLoaders({ mode }: BuildOptions): ModuleOptions["rules"] {
+  // const isDev = mode === "development";
   return [
     {
       test: /\.s[ac]ss$/i,
@@ -31,6 +31,9 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
       test: /\.tsx?$/,
       use: "ts-loader",
       exclude: /node_modules/,
+      options: {
+        transpileOnly: true,
+      },
     },
     {
       test: /\.(png|jpg|jpeg|gif)$/i,
